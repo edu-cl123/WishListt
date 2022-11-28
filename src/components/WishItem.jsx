@@ -12,7 +12,13 @@ import './WishItem.css';
 import { Container, Row } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 
-
+/**
+ * 
+ * @param {wish} -the desire to be modified
+ * @param {onChangeWish} -function that is called in case the desire changes
+ * @param {Array} -list of objects to be able to edit and delete
+ * @returns the button and two functionalities
+ */
 function WishItem({ wish, onChangeWish, Array }) {
   useEffect(() => {
     

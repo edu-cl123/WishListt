@@ -33,6 +33,11 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
+/**
+ * 
+ *  List the wish you can edit ,remove and add the wish
+ * @returns 
+ */
 function WishList({ onUpdateWish }) {
 
   const [wishes, setWishes] = useState([]);

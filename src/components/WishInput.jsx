@@ -7,7 +7,13 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
 
+/**
+ * 
+ * @param {onFilter} -returns the finder value
+ 
+ * @returns Returns the seeker and the modal to generate wish
 
+ */
 function WishInput({ onNewWish,onFilter }) {
   const inputText = useRef();
   const añadido = false;

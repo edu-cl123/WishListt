@@ -44,8 +44,8 @@ function App() {
       <br></br>
 
       <WishList
-      
-        
+
+
       />
 
 
