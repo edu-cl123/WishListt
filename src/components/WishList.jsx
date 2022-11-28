@@ -6,6 +6,7 @@ import { v4 as Uuid } from 'uuid';
 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import './WishList.css';
+import { off } from 'rsuite/esm/DOMHelper';
 
 const reorder = (list, startIndex, endIndex) => {
   const result = [...list];
@@ -22,17 +23,21 @@ const reorder = (list, startIndex, endIndex) => {
  */
 function WishList() {
 
-  const [wishes, setWishes] = useState([ { id: Uuid(), done: false, text: 'Travel to the moon' }]);
+  const [wishes, setWishes] = useState([{ id: Uuid(), done: false, text: 'Travel to the moon' }]);
   const [search, setSearch] = useState('');
+
 
 
   //On Init, carga los datos almacenados al cargar la pagina.
 
   useEffect(() => {
-    setWishes(JSON.parse(localStorage.getItem('wishes')));
-    if(wishes==null){
-      setWishes()
+    if(localStorage.getItem('wishes') === "null" ){
+      localStorage.setItem('wishes', JSON.stringify([{ id: Uuid(), done: false, text: 'Example' }]));
+      setWishes(JSON.parse(localStorage.getItem('wishes')))
+    }else{
+      setWishes(JSON.parse(localStorage.getItem('wishes')))
     }
+
   }, []);
 
   //Guarda la lista de deseos cuando se modifica la lista de wishes
@@ -96,6 +101,8 @@ function WishList() {
                         {...draggableProvided.dragHandleProps}
                         className="task-item"
                       >
+
+
                         <WishItem
                           wish={{ id, text, done }}
                           onChangeWish={(updatedWish) => {
