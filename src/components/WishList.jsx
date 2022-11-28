@@ -7,24 +7,6 @@ import { v4 as Uuid } from 'uuid';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import './WishList.css';
 
-
-/**
- * Callback to run when a wish changes.
- * @callback onUpdateWish - Callback to run when a wish changes.
- * @param {Object} updatedWish - Wish with new values.
- * @param {String} updatedWish.id - Identifier for wish.
- * @param {String} updatedWish.text - Text of wish.
- */
-
-/**
- * Manage a wish list.
- * @param {Object[]} wishes - List of wishes.
- * @param {String} wishes[].id - Identifier for wish.
- * @param {String} wishes[].text - Text of wish.
- * @param {onUpdateWish} callback - Callback to run when a wish changes.
- * @returns HTML with a wish list.
- * @todo Fix array map function.
- */
 const reorder = (list, startIndex, endIndex) => {
   const result = [...list];
   const [removed] = result.splice(startIndex, 1);
@@ -35,10 +17,10 @@ const reorder = (list, startIndex, endIndex) => {
 
 /**
  * 
- *  List the wish you can edit ,remove and add the wish
- * @returns 
+ *  
+ * @returns List the wish you can edit ,remove and add the wish
  */
-function WishList({ onUpdateWish }) {
+function WishList() {
 
   const [wishes, setWishes] = useState([]);
   const [search, setSearch] = useState('');

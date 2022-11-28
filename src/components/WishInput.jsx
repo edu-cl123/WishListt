@@ -9,7 +9,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 /**
  * 
- * @param {onFilter} -returns the finder value
+ * @param {Function}onFilter -returns the finder value
  
  * @returns Returns the seeker and the modal to generate wish
 

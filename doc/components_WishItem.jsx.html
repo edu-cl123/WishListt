@@ -1,4 +1,32 @@
-import React, { useEffect, useState, useRef } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/WishItem.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/WishItem.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ClassNames from 'classnames';
 import Button from 'react-bootstrap/Button';
@@ -32,7 +60,7 @@ function WishItem({ wish, onChangeWish, Array }) {
 
     if (inputText.current.value.length > 0) {
 
-      for (var i = 0; i < Array.length; i++) {
+      for (var i = 0; i &lt; Array.length; i++) {
 
         if (Array[i].id == wish.id) {
           Array[i].text = inputText.current.value;
@@ -54,7 +82,7 @@ function WishItem({ wish, onChangeWish, Array }) {
 
 
   const Delete = () => {
-    for (var i = 0; i < Array.length; i++) {
+    for (var i = 0; i &lt; Array.length; i++) {
 
       if (Array[i].id == wish.id) {
         Array.splice(i, 1);
@@ -68,15 +96,15 @@ function WishItem({ wish, onChangeWish, Array }) {
   }
 
   return (
-    <ul>
-      <li className="list-group-item wishItem">
+    &lt;ul>
+      &lt;li className="list-group-item wishItem">
 
-        <Container>
-          <Row>
+        &lt;Container>
+          &lt;Row>
 
-            <Col md={{ span: 0, offset: 0, }}>
+            &lt;Col md={{ span: 0, offset: 0, }}>
 
-              <input
+              &lt;input
                 type="checkbox"
                 defaultChecked={wish.done}
                 id={wish.id}
@@ -88,7 +116,7 @@ function WishItem({ wish, onChangeWish, Array }) {
                   });
                 }}
               />
-              <label
+              &lt;label
                 className={ClassNames({
                   'text-decoration-line-through': wish.done,
                   'wish-item-done': wish.done,
@@ -96,45 +124,45 @@ function WishItem({ wish, onChangeWish, Array }) {
                 htmlFor={wish.id}
               >
                 {wish.text}
-              </label>
-            </Col>
-            <Col md={{ span: 3, offset: 2 }}>
+              &lt;/label>
+            &lt;/Col>
+            &lt;Col md={{ span: 3, offset: 2 }}>
 
 
-              <Button variant="warning" onClick={handleShow} >Editar</Button>
+              &lt;Button variant="warning" onClick={handleShow} >Editar&lt;/Button>
 
-              <Button variant="danger" onClick={Delete}>Eliminar</Button>
-            </Col>
+              &lt;Button variant="danger" onClick={Delete}>Eliminar&lt;/Button>
+            &lt;/Col>
 
 
-          </Row>
-        </Container>
+          &lt;/Row>
+        &lt;/Container>
 
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Body>
+        &lt;Modal show={show} onHide={handleClose}>
+          &lt;Modal.Body>
 
-            <fieldset className="form-group">
-              <legend>Edit wish</legend>
-              <input defaultValue={wish.text}
+            &lt;fieldset className="form-group">
+              &lt;legend>Edit wish&lt;/legend>
+              &lt;input defaultValue={wish.text}
                 className="form-control"
                 type="text"
                 placeholder="Edit your  wish"
                 ref={inputText}
               />
-            </fieldset >
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={Close}>
+            &lt;/fieldset >
+          &lt;/Modal.Body>
+          &lt;Modal.Footer>
+            &lt;Button variant="secondary" onClick={Close}>
               Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
+            &lt;/Button>
+            &lt;Button variant="primary" onClick={handleClose}>
               Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
+            &lt;/Button>
+          &lt;/Modal.Footer>
+        &lt;/Modal>
 
-      </li>
-    </ul>
+      &lt;/li>
+    &lt;/ul>
   );
 }
 
@@ -154,3 +182,26 @@ WishItem.defaultProps = {
 };
 
 export default WishItem;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#WishInput">WishInput</a></li><li><a href="global.html#WishItem">WishItem</a></li><li><a href="global.html#WishList">WishList</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Mon Nov 28 2022 19:05:47 GMT+0100 (hora estándar de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

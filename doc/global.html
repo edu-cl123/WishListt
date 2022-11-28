@@ -156,7 +156,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="App.jsx.html">App.jsx</a>, <a href="App.jsx.html#line20">line 20</a>
+        <a href="App.jsx.html">App.jsx</a>, <a href="App.jsx.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -202,16 +202,12 @@
     
 
     
-    <h4 class="name" id="WishList"><span class="type-signature"></span>WishList<span class="signature">(wishes, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="WishInput"><span class="type-signature"></span>WishInput<span class="signature">(onFilter)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Manage a wish list.
-</div>
 
 
 
@@ -246,13 +242,13 @@
 
         <tr>
             
-                <td class="name"><code>wishes</code></td>
+                <td class="name"><code>onFilter</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Object></span>
+<span class="param-type">function</span>
 
 
             
@@ -262,102 +258,7 @@
 
             
 
-            <td class="description last">List of wishes.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Identifier for wish.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>text</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Text of wish.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#onUpdateWish">onUpdateWish</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Callback to run when a wish changes.</td>
+            <td class="description last">returns the finder value</td>
         </tr>
 
     
@@ -398,7 +299,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_WishList.jsx.html">components/WishList.jsx</a>, <a href="components_WishList.jsx.html#line22">line 22</a>
+        <a href="components_WishInput.jsx.html">components/WishInput.jsx</a>, <a href="components_WishInput.jsx.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -406,13 +307,6 @@
 
     
 
-    
-    <dt class="tag-todo">To Do:</dt>
-    <dd class="tag-todo">
-        <ul>
-            <li>Fix array map function.</li>
-        </ul>
-    </dd>
     
 </dl>
 
@@ -434,7 +328,7 @@
 
         
 <div class="param-desc">
-    HTML with a wish list.
+    Returns the seeker and the modal to generate wish
 </div>
 
 
@@ -446,27 +340,17 @@
 
 
         
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
+            
 
     
 
     
-    <h4 class="name" id="onUpdateWish"><span class="type-signature"></span>onUpdateWish<span class="signature">(updatedWish)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="WishItem"><span class="type-signature"></span>WishItem<span class="signature">(wish, onChangeWish, Array)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Callback to run when a wish changes.
-</div>
 
 
 
@@ -501,7 +385,7 @@
 
         <tr>
             
-                <td class="name"><code>updatedWish</code></td>
+                <td class="name"><code>wish</code></td>
             
 
             <td class="type">
@@ -517,62 +401,20 @@
 
             
 
-            <td class="description last">Wish with new values.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Identifier for wish.</td>
+            <td class="description last">the desire to be modified</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>text</code></td>
+                <td class="name"><code>onChangeWish</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">function</span>
 
 
             
@@ -582,14 +424,30 @@
 
             
 
-            <td class="description last">Text of wish.</td>
+            <td class="description last">function that is called in case the desire changes</td>
         </tr>
 
     
-    </tbody>
-</table>
 
+        <tr>
+            
+                <td class="name"><code>Array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
             </td>
+
+            
+
+            
+
+            <td class="description last">list of objects to be able to edit and delete</td>
         </tr>
 
     
@@ -630,7 +488,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_WishList.jsx.html">components/WishList.jsx</a>, <a href="components_WishList.jsx.html#line5">line 5</a>
+        <a href="components_WishItem.jsx.html">components/WishItem.jsx</a>, <a href="components_WishItem.jsx.html#line22">line 22</a>
     </li></ul></dd>
     
 
@@ -655,12 +513,118 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the button and two functionalities
+</div>
+
+
+
+    
 
 
 
 
 
+        
             
+
+    
+
+    
+    <h4 class="name" id="WishList"><span class="type-signature"></span>WishList<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="components_WishList.jsx.html">components/WishList.jsx</a>, <a href="components_WishList.jsx.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    List the wish you can edit ,remove and add the wish
+</div>
+
+
+
+    
+
+
+
+
+
+        
+    
+
     
 
     
@@ -674,13 +638,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#WishList">WishList</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#WishInput">WishInput</a></li><li><a href="global.html#WishItem">WishItem</a></li><li><a href="global.html#WishList">WishList</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Nov 03 2022 11:29:18 GMT+0100 (hora estándar de Europa central)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Mon Nov 28 2022 19:05:47 GMT+0100 (hora estándar de Europa central)
 </footer>
 
 <script> prettyPrint(); </script>
