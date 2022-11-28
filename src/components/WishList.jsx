@@ -25,16 +25,17 @@ function WishList() {
   const [wishes, setWishes] = useState([]);
   const [search, setSearch] = useState('');
 
+  //Guarda la lista de deseos cuando se modifica la lista de wishes
+  useEffect(() => {
+    localStorage.setItem('wishes', JSON.stringify(wishes));
+  }, [wishes]);
 
   //On Init, carga los datos almacenados al cargar la pagina.
   useEffect(() => {
     setWishes(JSON.parse(localStorage.getItem('wishes')));
   }, []);
 
-  //Guarda la lista de deseos cuando se modifica la lista de wishes
-  useEffect(() => {
-    localStorage.setItem('wishes', JSON.stringify(wishes));
-  }, [wishes]);
+
 
 
   return (
