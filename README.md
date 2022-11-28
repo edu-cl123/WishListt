@@ -31,5 +31,24 @@ En el proyecto tienes las siguientes caracteristicas:
 ## Manual de usuario
 Esta seria la primera vista en la que tenemos una barra de busqueda donde podemos escribir y nos filtra.
 Tenemos un boton para poder crear los deseos en el cual se nos abrira un modal para terminar de añadir
-y por ultimo tenemos la lista de nuestro deseo que marcandolos o cliclando en lo alto se nos marcara como completado
+y por ultimo tenemos la lista de nuestro deseo que marcandolos o cliclando en lo alto se nos marcara como completado.
+-Al pulsar sobre editar se nos abrira un modal donde tendremos el texto para modificar
+-AL pulsar eliminar eliminamos nuestro deseo de la lista sin previo aviso
 ![e](https://github.com/edu-cl123/WishListt/blob/main/Imagen/1.PNG)
+-Esta seria la pantalla de modal para añadir que lo unico que tenemos es que rellenar el campo y pulsar enter o pulsar el botón para añadir
+![e](https://github.com/edu-cl123/WishListt/blob/main/Imagen/2.PNG)
+
+-Esta seria la pantalla del modal para editar donde tenemos el texto para editarlo a nuestro gusto
+![e](https://github.com/edu-cl123/WishListt/blob/main/Imagen/3.PNG)
+
+-Para utilizar la barra de busqueda simplemente debemos que añadir algo y nos filtrara la lista
+ ![e](https://github.com/edu-cl123/WishListt/blob/main/Imagen/4.PNG)
+ 
+ -Para ordenar la lista simplemente cogemos un deseo y lo movemos como podemos observar en la animacion y se nos colocaria en el lugar deseado
+ 
+![image](https://github.com/edu-cl123/WishListt/blob/main/Imagen/picasion.com_f6fb7aedf5ad1fa6c40d4dd4f60dc3c0.gif)
+
+
+
+
+
