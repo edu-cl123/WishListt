@@ -22,19 +22,23 @@ const reorder = (list, startIndex, endIndex) => {
  */
 function WishList() {
 
-  const [wishes, setWishes] = useState([]);
+  const [wishes, setWishes] = useState([ { id: Uuid(), done: false, text: 'Travel to the moon' }]);
   const [search, setSearch] = useState('');
+
+
+  //On Init, carga los datos almacenados al cargar la pagina.
+
+  useEffect(() => {
+    setWishes(JSON.parse(localStorage.getItem('wishes')));
+    if(wishes==null){
+      setWishes()
+    }
+  }, []);
 
   //Guarda la lista de deseos cuando se modifica la lista de wishes
   useEffect(() => {
     localStorage.setItem('wishes', JSON.stringify(wishes));
   }, [wishes]);
-
-  //On Init, carga los datos almacenados al cargar la pagina.
-  useEffect(() => {
-    setWishes(JSON.parse(localStorage.getItem('wishes')));
-  }, []);
-
 
 
 
@@ -78,6 +82,7 @@ function WishList() {
                 ref={droppableProvided.innerRef}
                 className="task-container"
               >
+
                 {wishes.filter((item) => {
                   return search.toLowerCase() === ''
                     ? item
@@ -129,8 +134,6 @@ WishList.propTypes = {
 };
 
 WishList.defaultProps = {
-  wishes: [],
-  onUpdateWish: () => ({ id: '', text: '', done: false }),
 };
 
 
