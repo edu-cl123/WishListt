@@ -29,6 +29,9 @@ En el proyecto tienes las siguientes caracteristicas:
  - Buscar deseos a travez de un buscador y filtrado el listado de deseos
 
 ## Manual de usuario
+`npm start`
+Para iniciar la aplicación
+
 Esta seria la primera vista en la que tenemos una barra de busqueda donde podemos escribir y nos filtra.
 Tenemos un boton para poder crear los deseos en el cual se nos abrira un modal para terminar de añadir
 y por ultimo tenemos la lista de nuestro deseo que marcandolos o cliclando en lo alto se nos marcara como completado.
@@ -49,6 +52,15 @@ y por ultimo tenemos la lista de nuestro deseo que marcandolos o cliclando en lo
 ![image](https://github.com/edu-cl123/WishListt/blob/main/Imagen/picasion.com_f6fb7aedf5ad1fa6c40d4dd4f60dc3c0.gif)
 
 
+## Instalación
+
+La forma para instalar el proyecto seria muy sencilla ya que solo tendriamos que poner un comando
+`npm install`
+Posteriormente podremos observar que se nos ha generado la carpeta node_modules la cual contiene toda la informacion acerca de las librerias utilizadas
 
 
+## Licencia (reconocimiento-nocomercial-compartirigual 4.0 internacional)
+
+*Compartir en cualquier de medio o formato sin sacar beneficio de ellos
+*Adaptable a parti del material
 
