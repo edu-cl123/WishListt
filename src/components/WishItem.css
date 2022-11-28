@@ -1,0 +1,21 @@
+.wishItem label.wish-item-done {
+  margin-left: 0;
+  color: red;
+}
+
+ul {
+  padding: 0 !important;
+  list-style-type: none;
+}
+
+ul *{
+  margin-left: 0 !important;
+}
+
+input{
+  margin-right: 10px !important;
+}
+
+button{
+  margin-right: 10px !important;
+}

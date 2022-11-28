@@ -1,0 +1,35 @@
+.task-container {
+  /* border: 1px dotted pink; */
+  margin: 0;
+  list-style: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  color: rgb(16, 15, 15);
+  background-color: whitesmoke;
+  text-align: left;
+  margin: 5px;
+  border: 2px solid transparent;
+}
+
+.task-item:focus {
+  outline: none;
+  border: 2px solid #4a9af5;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #fd6e6e;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #2d3233;
+}

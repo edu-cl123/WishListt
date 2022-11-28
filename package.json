@@ -1,0 +1,38 @@
+{
+  "name": "wishlist",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{html,css,js,jsx,json}",
+    "doc": "jsdoc -r -d ./doc -R README.md ./src",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "classnames": "^2.3.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-bootstrap": "^2.6.0",
+    "react-bootstrap-buttons": "^1.0.0",
+    "react-bootstrap-modal": "^4.2.0",
+    "react-dom": "^18.2.0",
+    "rsuite": "^5.22.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react": "^7.31.10",
+    "jsdoc": "^3.6.11",
+    "prettier": "^2.7.1",
+    "vite": "^3.1.0"
+  }
+}
