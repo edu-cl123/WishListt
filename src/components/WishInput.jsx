@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as Uuidv4 } from 'uuid';
 import Modal from 'react-bootstrap/Modal';
@@ -6,54 +6,43 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-
 /**
- * 
+ *
  * @param {Function}onFilter -returns the finder value
- 
+
  * @returns Returns the seeker and the modal to generate wish
 
  */
-function WishInput({ onNewWish,onFilter }) {
+function WishInput({ onNewWish, onFilter }) {
   const inputText = useRef();
-  const añadido = false;
-  
-  const [search, setSearch] = useState('');
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
-
     if (inputText.current.value.length > 0) {
       onNewWish({
-          id: Uuidv4(),
-          text: inputText.current.value,
-          done: false,
-  
+        id: Uuidv4(),
+        text: inputText.current.value,
+        done: false,
+
       });
       inputText.current.value = '';
     }
 
     setShow(false);
-  }
+  };
 
   const handleShow = () => setShow(true);
-
-
-
-  const [wish, setWish] = useState("");
-
-
 
   return (
     <div className="container-fluid">
 
       <InputGroup className="mb-3">
         <Form.Control
-        
-        onChange={(e) => onFilter(e.target.value)}
+
+          onChange={(e) => onFilter(e.target.value)}
           placeholder="Search Wish"
         />
-        <Button variant="primary" onClick={handleShow} >
+        <Button variant="primary" onClick={handleShow}>
           Create wish
         </Button>
       </InputGroup>
@@ -80,7 +69,7 @@ function WishInput({ onNewWish,onFilter }) {
                 }
               }}
             />
-          </fieldset >
+          </fieldset>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -103,8 +92,7 @@ WishInput.propTypes = {
 
 WishInput.defaultProps = {
   onNewWish: () => { },
-  onFilter: () => { }
+  onFilter: () => { },
 };
-
 
 export default WishInput;
